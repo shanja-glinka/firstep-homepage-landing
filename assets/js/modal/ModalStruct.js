@@ -1,4 +1,4 @@
-const defaultAsetsPath = '/assets/';
+const defaultAsetsPath = 'assets/';
 
 class ModalStruct {
     constructor(modalData) {
