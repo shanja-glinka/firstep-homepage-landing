@@ -1,0 +1,43 @@
+{
+    "type": "modal",
+    "view": "field",
+    "version": "1.00",
+    "date": 1673658000000,
+    "title": "Прошлые проекты",
+    "content": [
+        {
+            "img": {
+                "src": "assets/img/Frame-6.jpg"
+            },
+            "rotate": "-1deg",
+            "x": "10px",
+            "y": "40px"
+        },
+        {
+            "img": {
+                "src": "assets/img/Frame-7.jpg"
+            },
+            "rotate": "3.5deg",
+            "width":"220px",
+            "x": "240px",
+            "y": "250px"
+        },
+        {
+            "button": {
+                "text": "Сотрудничать",
+                "style": "background: #ACC8FF; color: #000000",
+                "event": {
+                    "type": "click",
+                    "func": "followToMe"
+                }
+            },
+            "x": "300px",
+            "y": "450px"
+        }
+    ],
+    "params": {
+        "overlay-blur": true,
+        "overlay-click-to-close": true,
+        "overlay-hotkey-to-close": true
+    }
+}

@@ -1,0 +1,126 @@
+.overlay-mobile-nav {
+
+    display: none;
+    animation: overlay-toggle-out .4s var(--cubic-bezier-default) forwards;
+
+    &.active {
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        display: flex;
+        padding: 60px;
+        width: 400px;
+        background: var(--color-bg);
+
+        transform: translateX(300%);
+
+        animation: overlay-toggle-in .4s var(--cubic-bezier-default) forwards;
+        z-index: 30;
+    }
+
+
+    a {
+        font-weight: 400;
+        font-size: 30px;
+        color: var(--color-nav-link);
+    }
+
+    br {
+        margin: 50px;
+    }
+
+    .overlay-column {
+        display: flex;
+        flex-direction: column;
+        padding: 60px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 15px;
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            width: 90%;
+
+            img {
+                transition: all 0.2s var(--cubic-bezier-default);
+            }
+
+            &:hover {
+                img {
+                    position: relative;
+                    transform: translateX(5px);
+                    transition: all 0.2s cubic-bezier(0.46, 0, 0, 1.17);
+                }
+            }
+        }
+
+    }
+
+    .overlay-mobile__contacts {
+        a {
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-top: 10px;
+                text-decoration: underline;
+            }
+        }
+
+        h2 {
+            position: relative;
+            margin-top: 25px;
+            color: var(--color-text-title);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .burger__overlay {
+        width: 60px;
+        left: unset;
+        right: 60px;
+        top: 60px;
+    }
+
+}
+
+
+
+.overlay-active {
+    filter: blur(10px);
+}
+
+
+@keyframes overlay-toggle-in {
+    from {
+        transform: translateX(300%);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes overlay-toggle-out {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(300%);
+    }
+}

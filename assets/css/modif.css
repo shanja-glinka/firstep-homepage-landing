@@ -1,0 +1,20 @@
+
+.modal-album-info .modal-info-card .modal-title {
+    text-transform: uppercase;
+}
+
+.modal-album-info .modal-info-card .modal-descr {
+    opacity: .6;
+    padding-bottom: 20px;
+}
+
+.modal-field-wrap {
+	width: 800px;
+}
+
+.modal-field-item {
+	width: auto;
+}
+.modal-field-item img {
+	width: 400px;
+}

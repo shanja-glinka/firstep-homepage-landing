@@ -1,0 +1,50 @@
+{
+    "type": "modal",
+    "view": "album",
+    "version": "1.00",
+    "date": 1673658000000,
+    "img": [
+        {
+            "src": "assets/img/Frame-1-1.jpg"
+        },
+        {
+            "src": "assets/img/Frame-2-1.jpg"
+        },
+        {
+            "src": "assets/img/Frame-3-1.jpg"
+        }
+    ],
+    "title": "Наша цель",
+    "text": "достичь универсального решения для онлайн записи в сфере бьюти услуг, собрать салоны в одну систему с открытым алгоритмами рейтинга, накопительных систем, а также с механизмами защитой клиентов и мастеров.",
+    "descr": "принимаем инвестиции на проект ",
+    "buttons": {
+        "x-close": true,
+        "button-roadmap": {
+            "icon": null,
+            "text": "Дорожная карта",
+            "event": {
+                "type": "click",
+                "func": "roadmapFollow"
+            },
+            "style": null,
+            "class": null,
+            "textIndex": 0
+        },
+        "button-taste": {
+            "icon": null,
+            "text": "Сотрудничать",
+            "event": {
+                "type": "click",
+                "func": "followToMe"
+            },
+            "style": null,
+            "class": null,
+            "textIndex": 0
+        }
+    },
+    "params": {
+        "overlay-blur": true,
+        "overlay-click-to-close": true,
+        "overlay-hotkey-to-close": true
+    }
+}
