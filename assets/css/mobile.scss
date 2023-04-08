@@ -258,6 +258,35 @@
     }
 }
 
+@media (max-width: 1240px) {
+    .smooth-pare-animate {
+        width: 600px;
+        height: calc(100% - 50px);
+
+        .image img {
+            width: 250px;
+        }
+
+        .descr {
+            width: auto;
+            gap: 20px;
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 20px;
+                padding: 8px;
+            }
+        }
+    }
+}
 
 @media (max-width: 1000px) {
     :root {
@@ -553,7 +582,7 @@
         }
 
         .modal-formcontact-form {
-            
+
             margin-top: 15px;
             gap: 15px;
 
@@ -561,6 +590,44 @@
                 border: 1px solid #000000;
                 padding: 6px;
                 font-size: 16px;
+            }
+        }
+    }
+
+
+
+    .smooth-pare-animate {
+        position: relative;
+        width: calc(100% - 40px);
+        height: calc(100% - 50px);
+
+        .image {
+            z-index: 1;
+            position: absolute;
+            opacity: .4;
+            filter: blur(2px);
+            img {
+                width: 250px;
+            }
+        }
+
+        .descr {
+            z-index: 5;
+            width: auto;
+            gap: 10px;
+
+            h1 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 6px;
             }
         }
     }
@@ -805,7 +872,7 @@
         }
     }
 
-    
+
     .overlay-mobile-nav {
         box-sizing: border-box;
 

@@ -173,6 +173,30 @@
     font-size: var(--size-links);
   }
 }
+@media (max-width: 1240px) {
+  .smooth-pare-animate {
+    width: 600px;
+    height: calc(100% - 50px);
+  }
+  .smooth-pare-animate .image img {
+    width: 250px;
+  }
+  .smooth-pare-animate .descr {
+    width: auto;
+    gap: 20px;
+  }
+  .smooth-pare-animate .descr h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .smooth-pare-animate .descr p {
+    font-size: 20px;
+  }
+  .smooth-pare-animate .descr button {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
 @media (max-width: 1000px) {
   :root {
     --size-links: 24px;
@@ -367,6 +391,36 @@
     border: 1px solid #000000;
     padding: 6px;
     font-size: 16px;
+  }
+  .smooth-pare-animate {
+    position: relative;
+    width: calc(100% - 40px);
+    height: calc(100% - 50px);
+  }
+  .smooth-pare-animate .image {
+    z-index: 1;
+    position: absolute;
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+  .smooth-pare-animate .image img {
+    width: 250px;
+  }
+  .smooth-pare-animate .descr {
+    z-index: 5;
+    width: auto;
+    gap: 10px;
+  }
+  .smooth-pare-animate .descr h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .smooth-pare-animate .descr p {
+    font-size: 16px;
+  }
+  .smooth-pare-animate .descr button {
+    font-size: 16px;
+    padding: 6px;
   }
 }
 @media (max-width: 550px) {
