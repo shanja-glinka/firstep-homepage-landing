@@ -221,6 +221,15 @@
         transform: translateX(35%) translateY(44%)
     }
 }
+@keyframes card-info-in-mob {
+    from {
+        transform: translateX(0) translateY(250%);
+    }
+
+    to {
+        transform: translateX(0) translateY(44%)
+    }
+}
 
 /* *********** END ALBUM MODAL TYPE ************* */
 

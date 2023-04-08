@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="./assets/css/style.css?v=123070ff48c91cb6a8559c940975c132">
     <link rel="stylesheet" href="./assets/css/modal.css?v=123070ff48c91cb6a8559c940975c132">
+    <link rel="stylesheet" href="./assets/css/modal.mobile.css?v=123070ff48c91cb6a8559c940975c132">
     <link rel="stylesheet" href="./assets/css/modif.css?v=123070ff48c91cb6a8559c940975c132">
+
+    <link rel="stylesheet" href="./assets/css/tagsCloud.css">
+
     <link rel="stylesheet" href="./assets/css/mobile.css?v=123070ff48c91cb6a8559c940975c132">
 
 
@@ -80,7 +84,7 @@
                 <div class="overlay-mobile__contacts">
                     <h2>Есть классная идея? Давай обсудим!</h2>
 
-                    <button onclick="followToMe('', null);">Сотрудничать</button>
+                    <button onclick="followToMe(this, null);">Сотрудничать</button>
 
                     <br>
 
@@ -137,15 +141,15 @@
 
                 <div class="column__row">
                     <div class="about__links">
-                        <a href="#modal">
+                        <a href="#" data-link-modal="11">
                             <span>МЫ полезны</span>
                             <img src="./assets/img/Arrow-7.svg">
                         </a>
-                        <a href="#modal">
+                        <a href="#" data-link-modal="12">
                             <span>+ 5 лет опыта работы</span>
                             <img src="./assets/img/Arrow-7.svg">
                         </a>
-                        <a href="#modal">
+                        <a href="#" data-link-modal="13">
                             <span>Креативная команда</span>
                             <img src="./assets/img/Arrow-7.svg">
                         </a>
@@ -185,23 +189,23 @@
 
                     <div class="column__row">
                         <div class="services__links">
-                            <a href="#">
+                            <a href="#" data-link-modal="1">
                                 <span>web разработка</span>
                                 <img src="./assets/img/Arrow-7.svg">
                             </a>
-                            <a href="#">
+                            <a href="#" data-link-modal="2">
                                 <span>seo продвижение</span>
                                 <img src="./assets/img/Arrow-7.svg">
                             </a>
-                            <a href="#">
+                            <a href="#" data-link-modal="3">
                                 <span>web Аналитика</span>
                                 <img src="./assets/img/Arrow-7.svg">
                             </a>
-                            <a href="#">
+                            <a href="#" data-link-modal="4">
                                 <span>ui/ux дизайн</span>
                                 <img src="./assets/img/Arrow-7.svg">
                             </a>
-                            <a href="#">
+                            <a href="#" data-link-modal="5">
                                 <span>Таргетированная реклама</span>
                                 <img src="./assets/img/Arrow-7.svg">
                             </a>
@@ -316,7 +320,7 @@
             <div class="contacts__row">
                 <div class="contacts__contact-me">
                     <h2>МЕНЕДЖЕР СВЯЖЕТСЯ В ТЕЧЕНИИ 10 МИНУТ</h2>
-                    <button onclick="followToMe('', null);">Сотрудничать</button>
+                    <button onclick="followToMe(this, null);" id="main-contact-button">Сотрудничать</button>
                 </div>
             </div>
 
@@ -362,13 +366,50 @@
     </footer>
 
 
+
+
+    <!-- <div id="tagscloud"> -->
+    <!-- <span>Польза</span>
+            <span>Эффективность</span>
+            <span>Важность</span>
+            <span>Пригодность</span>
+            <span>Практичность</span>
+            <span>Выгода</span>
+            <span>Применимость</span>
+            <span>Функциональность</span>
+            <span>Надежность</span>
+            <span>Рациональность</span>
+            <span>Удобство</span>
+            <span>Качество</span>
+            <span>Оптимизация</span>
+            <span>Результативность</span>
+            <span>Смысл</span>
+            <span>Ценность</span>
+            <span>Расходы</span>
+            <span>Экономия</span>
+            <span>Инвестиция</span>
+            <span>Разумность</span> -->
+
+    <!-- <div class="span12" id="canvas-container">
+                <canvas id="canvas" class="canvas"></canvas>
+                <div id="html-canvas" class="canvas hide"></div>
+            </div> -->
+    <!-- </div> -->
+
+
     <script src="./assets/js/modal/AnimationSctruct.js"></script>
     <script src="./assets/js/modal/ModalStruct.js"></script>
     <script src="./assets/js/modal/ModalAlbum.js"></script>
     <script src="./assets/js/modal/ModalAlbumAnimation.js"></script>
     <script src="./assets/js/modal/ModalField.js"></script>
     <script src="./assets/js/modal/ModalFieldAnimation.js"></script>
+    <script src="./assets/js/modal/ModalFormContact.js"></script>
 
+
+    <script src="./assets/js/lib/tagsCloud.js"></script>
+
+    <script src="./assets/js/utils/shittyModal.js"></script>
+    <script src="./assets/js/utils/megaShitModal.js"></script>
     <script src="./assets/js/utils/DragAndMoveGlob.js"></script>
 
     <script src="./assets/js/utils.js"></script>

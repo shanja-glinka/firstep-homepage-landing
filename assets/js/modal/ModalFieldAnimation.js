@@ -6,32 +6,6 @@ class ModalFieldAnimation extends AnimationSctruct {
     }
 
 
-    animateIn(elementCall, modalElement) {
-
-        let cssTransform = this.setModalPosition(elementCall, modalElement, .8);
-        let timeoutLength = 200;
-
-        setTimeout(() => {
-            _doc.addStyles(modalElement, {
-                opacity: 1,
-                'transform': cssTransform
-            })
-        }, timeoutLength);
-
-        return timeoutLength;
-
-    }
-
-    animateOut(elementCall, modalElement) {
-
-        _doc.addStyles(modalElement, { opacity: 0 });
-        modalElement.style.cssText = modalElement.style.cssText.replace('scale(1)', 'scale(.8)')
-
-        let timeoutLength = 200;
-
-        return timeoutLength;
-    }
-
 
     /**
      * 

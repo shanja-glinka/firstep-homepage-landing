@@ -168,6 +168,10 @@ const _doc = {
                 elemdata = formated[key];
 
 
+
+            if (!elemdata)
+                continue;
+
             let tagName = elemdata['tagName'];
             let children = null;
 
@@ -260,9 +264,11 @@ const makeFetchJson = (request, callback) => {
 
 
 function followToMe(e, it) {
-    console.log('followed');
     if (it != null)
         it.destroy();
+
+    e = document.querySelector('#main-contact-button');
+    modalAdd[2].render(e);
 }
 
 function roadmapFollow(e, it) {

@@ -39,8 +39,9 @@ class AnimationSctruct {
         }
         return 0;
     }
-    
+
     setModalPosition(elementCall, modalElement, scale) {
+
         let elementPos = this.getBoundingClientRect(elementCall);
         let modalPos = this.getBoundingClientRect(modalElement);
         let bodyWidth = _doc.body('body').clientWidth;
@@ -53,7 +54,7 @@ class AnimationSctruct {
 
         let cssTransform = 'scale(' + scale + ')';
 
-        
+
         if ((leftPos || rightPos) && (topPos || bottomPos) && false) {
             let posx = leftPos ? elementPos.left - modalPos.width - 10 : elementPos.right + 10;
             let posy = topPos ? elementPos.top : elementPos.bottom - modalPos.height;
@@ -77,4 +78,32 @@ class AnimationSctruct {
 
         return cssTransform.replace('scale(' + scale + ')', 'scale(1)');
     }
+
+
+    animateIn(elementCall, modalElement) {
+
+        let cssTransform = this.setModalPosition(elementCall, modalElement, .8);
+        let timeoutLength = 200;
+
+        setTimeout(() => {
+            _doc.addStyles(modalElement, {
+                opacity: 1,
+                'transform': cssTransform
+            })
+        }, timeoutLength);
+
+        return timeoutLength;
+
+    }
+
+    animateOut(elementCall, modalElement) {
+
+        _doc.addStyles(modalElement, { opacity: 0 });
+        modalElement.style.cssText = modalElement.style.cssText.replace('scale(1)', 'scale(.8)')
+
+        let timeoutLength = 200;
+
+        return timeoutLength;
+    }
+
 }

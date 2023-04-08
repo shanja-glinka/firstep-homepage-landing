@@ -7,7 +7,18 @@ let elementCall__lastProjects = document.querySelector('.img-solo');
 let elementCall__burger = document.querySelectorAll('.burger__overlay');
 
 
-let burgerToggleEvent = () => {
+modalAdd[2] = new ModalFormContact({
+    data: null,
+    "params": {
+        "overlay-blur": true,
+        "overlay-click-to-close": true,
+        "overlay-hotkey-to-close": true
+    }
+});
+
+
+
+const burgerToggleEvent = () => {
     elementCall__burger.forEach(burger => {
         burger.classList.toggle('active');
     });
@@ -23,7 +34,7 @@ let burgerToggleEvent = () => {
 }
 
 
-let mobileOverlayEventsStart = () => {
+const mobileOverlayEventsStart = () => {
     elementCall__burger.forEach(burger => {
         burger.addEventListener('click', () => {
             burgerToggleEvent();
@@ -38,6 +49,28 @@ let mobileOverlayEventsStart = () => {
 
     document.querySelector('.overlay-mobile-nav button').addEventListener('click', () => {
         burgerToggleEvent();
+    });
+}
+
+
+
+const shittyModalEventStart = () => {
+    document.querySelectorAll('[data-link-modal]').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            switch(el.getAttribute('data-link-modal') - 0) {
+                case 1: return shittyModal1();
+                case 2: return shittyModal2();
+                case 3: return shittyModal3();
+                case 4: return shittyModal4();
+                case 5: return shittyModal5();
+                case 11: return megaShitModal1(el);
+                case 12: return megaShitModal2(el);
+                case 12: return megaShitModal3(el);
+                default: return;
+            }
+        })
     });
 }
 
@@ -65,5 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     mobileOverlayEventsStart();
+
+    shittyModalEventStart();
 
 });
