@@ -101,4 +101,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     shittyModalEventStart();
 
+    document.querySelector('.main__contact-to-us').addEventListener('click', (e) => {
+        e.preventDefault();
+
+        followToMe(e.target, null);
+    });
+
 });
