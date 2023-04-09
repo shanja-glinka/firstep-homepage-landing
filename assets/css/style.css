@@ -810,6 +810,60 @@ footer .footer__contacts h2::before {
   width: max-content;
   margin-left: auto;
 }
+.smooth-pare-animate canvas {
+  display: block;
+  width: 100%;
+}
+
+.manicure__protoypes {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.manicure__protoypes .manicure__protoype-row {
+  display: flex;
+  gap: 40px;
+}
+.manicure__protoypes .manicure__protoype-row .protoype__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.manicure__protoypes .manicure__protoype-row .protoype__item .protoype__title {
+  font-size: 40px;
+  font-weight: 600;
+}
+.manicure__protoypes .manicure__protoype-row .protoype__item .protoype__description {
+  font-size: 22px;
+  font-weight: 400;
+}
+.manicure__protoypes .manicure__protoype-row .protoype__item .protoype__follow {
+  box-sizing: border-box;
+  text-align: right;
+}
+.manicure__protoypes .manicure__protoype-row .protoype__item .protoype__follow a {
+  cursor: pointer;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  padding: 10px;
+  border: 2px solid var(--color-title-color);
+  background: var(--color-title-color);
+  color: var(--color-button-bg);
+  transition: 0.2s var(--cubic-bezier-default);
+}
+.manicure__protoypes .manicure__protoype-row .protoype__item .protoype__follow a:hover {
+  border: 2px solid var(--color-title-color);
+  transition: 0.2s var(--cubic-bezier-default);
+  background: var(--color-button-bg);
+  color: var(--color-title-color);
+}
 
 @keyframes icon-rotate {
   from {

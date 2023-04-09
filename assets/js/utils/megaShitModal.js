@@ -1,19 +1,55 @@
-const megaShitConstructor = (imageSrc, title, descr) => {
-    
-    return null;
+
+
+const megaShitConstructor = (list) => {
+    let elem = document.createElement('div');
+
+    elem.className = 'modal-wrap apblur';
+    elem.innerHTML = `
+    <div class="smooth-pare-animate">
+        <canvas id="wordlist2"></canvas>
+    </div>
+    `
+
+    elem.querySelector('.smooth-pare-animate').addEventListener('click', () => {
+        megaShitAnimate(elem, false);
+    });
+
+
+    // gridSize: 
+    document.querySelector('body').appendChild(elem);
+
+    let canvas = elem.querySelector('#wordlist2');
+    let w = canvas.offsetWidth;
+    let h = canvas.offsetHeight;
+
+    canvas.setAttribute('width', w);
+    canvas.setAttribute('heigth', h);
+
+    WordCloud(canvas, {
+        list: list,
+        fontFamily: 'Times, serif',
+        color: '#000',
+        backgroundColor: 'transparent',
+        
+        
+        shrinkToFit: true,
+        drawOutOfBound: false,
+
+        shuffle: true,
+        rotateRatio: 0.5,
+        rotationSteps: 90
+    });
+
+
+    setTimeout(() => {
+        elem.querySelector('.smooth-pare-animate').style.opacity = 1;
+    }, 100);
+
+    return elem;
 }
 
 const megaShitAnimate = (modal, animateIn = true) => {
-
-    return;
-
-    if (animateIn) {
-        document.querySelector('body').appendChild(modal);
-        setTimeout(() => {
-            modal.querySelector('.smooth-pare-animate').style.opacity = 1;
-        }, 100)
-    } else {
-
+    if (!animateIn) {
         modal.querySelector('.smooth-pare-animate').style.opacity = 0;
         setTimeout(() => {
             document.querySelector('body').removeChild(document.querySelector('.modal-wrap'));
@@ -21,48 +57,86 @@ const megaShitAnimate = (modal, animateIn = true) => {
     }
 }
 
+const getRand = (min = 40, max = 120) => {
+    return Math.random() * (max - min) + min;
+}
+
+
+
 const megaShitModal1 = (el) => {
     megaShitAnimate(
-        megaShitConstructor(
-            `<span>Польза</span>
-            <span>Эффективность</span>
-            <span>Важность</span>
-            <span>Пригодность</span>
-            <span>Практичность</span>
-            <span>Выгода</span>
-            <span>Применимость</span>
-            <span>Функциональность</span>
-            <span>Надежность</span>
-            <span>Рациональность</span>
-            <span>Удобство</span>
-            <span>Качество</span>
-            <span>Оптимизация</span>
-            <span>Результативность</span>
-            <span>Смысл</span>
-            <span>Ценность</span>
-            <span>Расходы</span>
-            <span>Экономия</span>
-            <span>Инвестиция</span>
-            <span>Разумность</span>`
-        )
+        megaShitConstructor([
+            ['Польза', getRand()],
+            ['Эффективность', getRand()],
+            ['Важность', getRand()],
+            ['Пригодность', getRand()],
+            ['Практичность', getRand()],
+            ['Выгода', getRand()],
+            ['Применимость', getRand()],
+            ['Функциональность', getRand()],
+            ['Надежность', getRand()],
+            ['Рациональность', getRand()],
+            ['Удобство', getRand()],
+            ['Качество', getRand()],
+            ['Результативность', getRand()],
+            ['Оптимизация', getRand()],
+            ['Смысл', getRand()],
+            ['Ценность', getRand()],
+            ['Расходы', getRand()],
+            ['Экономия', getRand()],
+            ['Инвестиция', getRand()],
+            ['Разумность', getRand()]
+        ])
     );
 }
 
 const megaShitModal2 = (el) => {
     megaShitAnimate(
-        megaShitConstructor(
-            './assets/img/e7cb5848e909092914cc6dbb714915e6-removebg-preview1.png',
-            'seo продвижение',
-            `Увеличение онлайн-присутствия и привлечение новых клиентов через поисковые системы - это эффективный способ развития вашего бизнеса. Наша команда SEO-экспертов поможет вам достичь высоких позиций в результатах поиска, увеличить трафик на ваш сайт и улучшить конверсию. Не упустите возможность увеличить доход вашего бизнеса.`
-        )
+        megaShitConstructor([
+            ['Опыт', getRand()],
+            ['Навыки', getRand()],
+            ['Знания', getRand()],
+            ['Компетенции', getRand()],
+            ['Профессионализм', getRand()],
+            ['Опытность', getRand()],
+            ['Умения', getRand()],
+            ['Технические навыки', getRand()],
+            ['Руководство', getRand()],
+            ['Профессионалы', getRand()],
+            ['Опыт разработки', getRand()],
+            ['Опыт работы с клиентами', getRand()],
+            ['командная работа', getRand()],
+            ['Опыт в проектах', getRand()],
+            ['Управление проектами', getRand()],
+            ['Практики', getRand()],
+            ['Специалисты', getRand()]
+        ])
     );
 }
 const megaShitModal3 = (el) => {
     megaShitAnimate(
-        megaShitConstructor(
-            './assets/img/086959e33b9f021e3e0ecd13c3de797f-removebg-preview1.png',
-            'web Аналитика',
-            `Мы поможем вам максимально эффективно использовать ваш сайт для достижения ваших бизнес-целей. Наша команда экспертов в аналитике поможет вам разобраться в том, как пользователи взаимодействуют с вашим сайтом, выявить проблемные моменты и предложить решения для увеличения конверсии.`
-        )
+        megaShitConstructor([
+            ['Креативность', getRand()],
+            ['Идеи', getRand()],
+            ['Инновации', getRand()],
+            ['Вдохновение', getRand()],
+            ['Эксперименты', getRand()],
+            ['Творчество', getRand()],
+            ['Командная работа', getRand()],
+            ['Коллектив', getRand()],
+            ['Сотрудничество', getRand()],
+            ['Совместная работа', getRand()],
+            ['Развитие идей', getRand()],
+            ['Конструктивность', getRand()],
+            ['Решения', getRand()],
+            ['Дизайн', getRand()],
+            ['Разработка', getRand()],
+            ['Концепция', getRand()],
+            ['Аналитика', getRand()],
+            ['Исследование', getRand()],
+            ['Проекты', getRand()],
+            ['Процессы', getRand()],
+            ['Мозговой штурм', getRand()]
+        ])
     );
 }

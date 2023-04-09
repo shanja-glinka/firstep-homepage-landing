@@ -272,5 +272,16 @@ function followToMe(e, it) {
 }
 
 function roadmapFollow(e, it) {
-    it.destroy();
+    if (it != null)
+        it.destroy();
+
+
+    window.open('https://shanja-glinka.github.io/roadmap.manicureApp-view/', '_blank');
+}
+
+function prototypeFollow(e, it) {
+    if (it != null)
+        it.destroy();
+
+    window.open('./manicure-app.html', '_blank');
 }

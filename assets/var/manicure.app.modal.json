@@ -30,6 +30,17 @@
             "class": null,
             "textIndex": 0
         },
+        "button-prototype": {
+            "icon": null,
+            "text": "Прототип",
+            "event": {
+                "type": "click",
+                "func": "prototypeFollow"
+            },
+            "style": null,
+            "class": null,
+            "textIndex": 0
+        },
         "button-taste": {
             "icon": null,
             "text": "Сотрудничать",

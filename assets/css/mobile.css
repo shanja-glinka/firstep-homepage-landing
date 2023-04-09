@@ -580,6 +580,17 @@
     right: 20px;
     top: 20px;
   }
+  @keyframes smooth-pare-animate {
+    from {
+      transform: translateY(-3%);
+    }
+    50% {
+      transform: translateY(3%);
+    }
+    to {
+      transform: translateY(-3%);
+    }
+  }
 }
 @media (max-width: 400px) {
   :root {

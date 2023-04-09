@@ -67,7 +67,7 @@ const shittyModalEventStart = () => {
                 case 5: return shittyModal5();
                 case 11: return megaShitModal1(el);
                 case 12: return megaShitModal2(el);
-                case 12: return megaShitModal3(el);
+                case 13: return megaShitModal3(el);
                 default: return;
             }
         })
