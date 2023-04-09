@@ -13,6 +13,8 @@
         background: var(--color-bg);
 
         transform: translateX(300%);
+        box-shadow: rgba(80, 80, 80, 0.58) 0px 7px 13px;
+
 
         animation: overlay-toggle-in .4s var(--cubic-bezier-default) forwards;
         z-index: 30;
@@ -606,6 +608,7 @@
             position: absolute;
             opacity: .4;
             filter: blur(2px);
+
             img {
                 width: 250px;
             }
@@ -909,6 +912,12 @@
                 text-align: center;
             }
         }
+    }
+
+    .overlay-mobile-nav.active {
+        left: 0;
+        right: 0;
+        width: 100%;
     }
 
     .header__toogle {
