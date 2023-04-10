@@ -423,6 +423,19 @@
     font-size: 16px;
     padding: 6px;
   }
+  .manicure__protoypes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .manicure__protoypes .manicure__protoype-row {
+    flex-direction: column;
+  }
 }
 @media (max-width: 550px) {
   header::after {
